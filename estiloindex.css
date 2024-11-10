@@ -1,7 +1,7 @@
 /* -------------------ACA EMPIEZA SERVICIOS------------------------------------*/
 
 main {
-    background-color: orange;
+    background-color: rgb(0, 255, 204);
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
