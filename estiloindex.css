@@ -1,11 +1,26 @@
+:root {
+    --color-principal: orange;
+    --borde-general: 1.5px solid rgb(187, 186, 186);
+    --color-footer: black;
+
+}
+
+
 /* -------------------ACA EMPIEZA SERVICIOS------------------------------------*/
 
 main {
-    background-color: rgb(0, 255, 204);
-    display: grid;
-    grid-template-columns: auto auto auto;
+    background-color: var(--color-principal);
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
+}
+
+.fila1 {
+    display:flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -13,14 +28,18 @@ main {
     margin-bottom: 10px;
 }
 
+.card-text {
+    font-size: 20px;
+}
+
 .cardborder {
-    border: solid 1.5px rgb(187, 186, 186);
+    border: var(--borde-general);
     padding: 5px;
     height: 100%;
 }
 
 footer {
-    background-color: black;
+    background-color: var(--color-footer);
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -70,7 +89,7 @@ footer {
 /* -------------------ACA EMPIEZA INDEX------------------------------------*/
 
 .serv1 {
-    border: 2px solid black;
+    border: var(--borde-general);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -82,7 +101,6 @@ footer {
 .img1 {
     height: 100%;
     width: 70%;
-    background-color: red;
 }
 
 .img1 img {
@@ -99,14 +117,26 @@ footer {
     justify-content: center;
 }
 
-/* -------------------ACA EMPIEZA MEDIA QUERIES------------------------------------*/
+span {
+    color: orangered;
+    font-family: Arial;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -3px;
+}
+
+/* -------------------ACA EMPIEZA MEDIA QUERIES DE SERVICIOS------------------------------------*/
 
 @media screen and (max-width: 480px) {
 
     main {
         display: flex;
-        flex-wrap: wrap;
-        row-gap: 5px;
+        align-items: center;
+    }
+
+    .fila1 {
+        display: flex;
+        flex-direction: column;
     }
 
     .navbar-nav {
@@ -130,7 +160,6 @@ footer {
         text-align: center;
         align-content: center;
         width: 100%;
-        justify-items: center;
     }
     
     .titulo {
@@ -161,7 +190,7 @@ footer {
 /* -------------------ACA EMPIEZA MEDIA QUERIES INDEX------------------------------------*/
 
     .serv1 {
-        border: 2px solid black;
+        border: var(--borde-general);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -173,7 +202,6 @@ footer {
 .img1 {
     height: 100%;
     width: 100%;
-    background-color: red;
 }
 
 .img1 img {
@@ -188,6 +216,10 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.tex1 h1 {
+    margin-top: 15px;
 }
 
 }
